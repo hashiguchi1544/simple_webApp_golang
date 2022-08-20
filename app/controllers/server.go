@@ -19,6 +19,7 @@ func StartServer() error {
 	files := http.FileServer(http.Dir("app/views"))
 	http.Handle("/static/", http.StripPrefix("/static/", files))
 
+	http.HandleFunc("/", index)
 	http.HandleFunc("/top/", top)
 
 	return http.ListenAndServe(":8080", nil)

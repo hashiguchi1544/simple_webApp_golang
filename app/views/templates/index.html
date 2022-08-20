@@ -1,0 +1,14 @@
+{{define "content"}}
+<br>
+<ul class="wrap">
+{{ range $i, $v := . }}
+  <li class="content">
+<!--    <p>{{$i}}</p>-->
+    <p>{{$v}}</p>
+  </li>
+
+{{end}}
+</ul>
+
+
+{{end}}
